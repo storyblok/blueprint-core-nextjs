@@ -1,0 +1,6 @@
+.teaser {
+  background-color: #dbd0ff;
+  padding: 8rem;
+  display: grid;
+  place-content: center;
+}

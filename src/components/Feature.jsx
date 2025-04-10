@@ -1,7 +1,12 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
+import styles from "./Feature.module.css";
 
 const Feature = ({ blok }) => {
-  return <h2 {...storyblokEditable(blok)}>{blok.name}</h2>;
+  return (
+    <div className={styles.feature} {...storyblokEditable(blok)}>
+      <span>{blok.name}</span>
+    </div>
+  );
 };
 
 export default Feature;
