@@ -1,12 +1,12 @@
 import { getStoryblokApi } from "@/lib/storyblok";
-
 import { StoryblokStory } from "@storyblok/react/rsc";
+import styles from "./page.module.css";
 
 export default async function Home() {
   const { data } = await fetchData();
 
   return (
-    <div>
+    <div className={styles.page}>
       <StoryblokStory story={data.story} />
     </div>
   );
