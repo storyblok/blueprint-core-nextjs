@@ -1,6 +1,7 @@
 .grid {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   padding: 4rem;
+  gap: 1rem;
 }
