@@ -1,11 +1,5 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import StoryblokProvider from "@/components/StoryblokProvider";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -17,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <StoryblokProvider>
       <html lang="en">
-        <body className={`${inter.variable}`}>
+        <body>
           {children}
           <footer>All rights reserved © {currentYear} </footer>
         </body>
