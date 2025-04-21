@@ -1,7 +1,0 @@
-.grid {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 4rem;
-  gap: 1rem;
-}
