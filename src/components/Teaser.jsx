@@ -3,7 +3,7 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 const Teaser = ({ blok }) => {
   return (
     <div className="teaser" {...storyblokEditable(blok)}>
-      <h1>{blok.headline}</h1>
+      <h2>{blok.headline}</h2>
     </div>
   );
 };
