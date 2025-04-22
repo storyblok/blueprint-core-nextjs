@@ -37,3 +37,5 @@ footer {
   margin-top: auto;
   padding: 1rem;
 }
+
+@import "./blueprint.css";

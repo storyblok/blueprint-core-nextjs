@@ -2,10 +2,9 @@ import {
   storyblokEditable,
   StoryblokServerComponent,
 } from '@storyblok/react/rsc'
-import styles from './Grid.module.css'
 
 const Grid = ({ blok }) => (
-  <div {...storyblokEditable(blok)} className={styles.grid}>
+  <div {...storyblokEditable(blok)} className="grid">
     {blok.columns.map((nestedBlok) => (
       <StoryblokServerComponent blok={nestedBlok} key={nestedBlok._uid} />
     ))}
