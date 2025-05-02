@@ -1,23 +1,25 @@
 
-# Astro Storyblok Starter Blueprint
+# Next.js Storyblok Starter Blueprint
 
-Integrate [Astro](https://astro.build/) and [Storyblok](http://www.storyblok.com) as a headless CMS.
+Integrate [Next.js](https://nextjs.org/) and [Storyblok](http://www.storyblok.com) as a headless CMS.
 
-The blueprint is ideal for kick-starting new Storyblok and Astro projects. It features the following:
+The blueprint is ideal for kick-starting new Storyblok and Next.js projects. What's inside:
 - Pre-configured default blocks: `page`, `teaser`, `grid`, and `feature`.
 - Support for the Visual Editor's live preview.
 - Dynamic routing to fetch and render new stories automatically.
-- Rich text rendering and global content management.
-- Authentication-ready.
-- Internationalization-ready.
 - Minimal styling.
 
-> [!SUMMARY] Live preview
-> This feature provides real-time editing capabilities. [Learn how to enable the complete solution](https://github.com/storyblok/storyblok-astro?tab=readme-ov-file#enabling-live-preview-for-storybloks-visual-editor).
+To learn how to take advantage of Storyblok's range of features, including rich text rendering, global content management, and Internationalization, read our [Next.js-Storyblok integration guide](LINK).
+
+***
+
+[![Open in GitHub Codespaces](https://img.shields.io/badge/Open%20in%20GitHub%20Codespaces-dad4ff.svg?style=for-the-badge&logo=GitHub&logoColor=181717&labelColor=ffffff&color=dad4ff)](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=962644002&ref=main&geo=EuropeWest)
+[![Try Storyblok free](https://img.shields.io/badge/Try%20Storyblok-dad4ff.svg?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZD0iTTQuNzA3IDIuNTM4aDIyLjUyOXYyMy41ODdINC43MDd6IiBzdHlsZT0iZmlsbDojZmZmIi8+PHBhdGggZmlsbD0iIzFmMWYxZiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMS43NDMgMi42MDFBMi41OTcgMi41OTcgMCAwIDEgNC4zMzUgMGgyMy4zM2EyLjU5NyAyLjU5NyAwIDAgMSAyLjU5MiAyLjYwMXYyMy40MTFhMi41OTcgMi41OTcgMCAwIDEtMi41OTIgMi42MDJIMTIuNTQ4bC0zLjg3MiAzLjIwOGEuNzcuNzcgMCAwIDEtMS4yNjEtLjU5N3YtMi42MTFoLTMuMDhhMi41OTcgMi41OTcgMCAwIDEtMi41OTItMi42MDJabTUuNjcgMi4xMjdoMTIuNDYyYzIuNjkxIDAgNC44NzMgMi4xOSA0Ljg3MyA0Ljg5IDAgMi4xNjQtMS40IDQtMy4zNDIgNC42NDRhNC44ODcgNC44ODcgMCAwIDEgMy45OSA0LjgxYzAgMi43MDEtMi4xODEgNC44OS00Ljg3MyA0Ljg5SDcuNDEzdi05LjQ1NFptMTAuMzY0IDQuNEgxMS45NXYyLjkzNGg1LjgyOGMuODA4IDAgMS40NjItLjY1NiAxLjQ2Mi0xLjQ2NyAwLS44MS0uNjU0LTEuNDY3LTEuNDYyLTEuNDY3em0tNS44MjggNi41Mmg2LjMxNGMuODk3IDAgMS42MjQuNzMgMS42MjQgMS42MyAwIC45MDEtLjcyNyAxLjYzLTEuNjI0IDEuNjNoLTYuMzE0eiIgY2xpcC1ydWxlPSJldmVub2RkIiBzdHlsZT0ic3Ryb2tlLXdpZHRoOjEuNTE3NzUiLz48L3N2Zz4K&labelColor=ffffff)]((https://app.storyblok.com/#/signup))
+[![Join the Storyblok Discord community](https://img.shields.io/discord/700316478792138842?style=for-the-badge&logo=discord&label=Join%20our%20community&labelColor=ffffff&color=dad4ff)]((https://discord.gg/jKrbAMz))
 
 ## Get Started
 
-1. Clone this repository
+1. Create a new repository based on this template
 2. Open the project on your device
 3. Install dependencies
 
@@ -33,7 +35,7 @@ In the root of the project, create a `.env` file to store the Storyblok access t
 STORYBLOK_ACCESS_TOKEN="<REPLACE_WITH_YOUR_TOKEN>"
 ```
 
-> [!INFO] API access token
+> [!IMPORTANT]
 > Copy your space's preview access token from **Settings** > **Access Tokens**.
 > Learn more about Storyblok [access tokens](https://www.storyblok.com/docs/concepts/access-tokens).
 
@@ -41,8 +43,8 @@ STORYBLOK_ACCESS_TOKEN="<REPLACE_WITH_YOUR_TOKEN>"
 
 To connect to the Storyblok Visual Editor, the local project must run over HTTPS.
 
-> [!INFO] HTTPS
-> Learn how to [create a local HTTPS certificate on macOS](https://www.storyblok.com/faq/setup-dev-server-https-proxy)
+> [!TIP]
+> Learn how to [create a local HTTPS certificate](https://www.storyblok.com/docs/concepts/visual-editor#local-development-via-https)
 
 To render a preview of the local project in the Visual Editor, follow these steps:
 
@@ -53,18 +55,9 @@ To render a preview of the local project in the Visual Editor, follow these step
 5. Click **Config**.
 6. Type `/` in the **Real path**.
 
->[!TIP] Proxy command
->Edit your `package.json` file to add a dedicated command:
-> > [!EXAMPLE]
-> > ```sh
-> > "proxy": "local-ssl-proxy --source 3000 --target 4321 --cert PATH/TO/localhost.pem --key PATH/TO/localhost-key.pem",
-> > "storyblok": "npm run dev & npm run proxy"
-> 
-> Change `PATH/TO/` to match the path of your `localhost.pem` and `localhost-key.pem` files.
-
 Run the development server with HTTPS enabled:
 ```sh
-npm run storyblok
+npx next dev --experimental-https
 ```
 
 Back in Storyblok, open the **Home** story to start editing.
@@ -73,75 +66,51 @@ Happy building!
 
 ## Project Structure
 
-This blueprint includes the following directories and files:
+<details>
+
+<summary>This blueprint includes the following directories and files (click to expand)</summary>
 
 ```sh
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│       └── Layout.astro
-│   └── pages/
-│       └── _index.astro
-│       └── [...slug].astro
-│       └── _[...slug]-pre-i18n.astro
-│   ├── components/
-│   ├── assets/
-│       └── astro.svg
-│   ├── styles/
-│       └── global.css
-│   ├── storyblok/
-│       └── ArticleOverview.astro
-│       └── Feature.astro
-│       └── FeaturedArticles.astro
-│       └── Page.astro
-│       └── Article.astro
-│       └── Teaser.astro
-│       └── Grid.astro
-└── package.json
-└── .gitignore
-└── .env.example
-└── README
-└── astro.config.mjs
-└── tsconfig.json
+src/
+├─ app/
+│  ├─ [...slug]/
+│     ├─ page.js
+│  ├─ favicon.ico
+│  ├─ layout.js
+│  ├─ page.js
+├─ components/
+│  ├─ Feature.jsx
+│  ├─ Grid.jsx
+│  ├─ Pagee.jsx
+│  ├─ StoryblokProvider.jsx
+│  ├─ Teaser.jsx
+├─ lib/
+│  ├─ storyblok.js
+├─ .env.example
+├─ .gitignore
+├─ .netlify.toml
+├─ eslint.config.mjs
+├─ jsconfig.json
+├─ LICENSE
+├─ next.config.mjs
+├─ package-lock.json
+├─ package.json
+├─ README.md
+
 ```
 
-To learn more about Astro's file structure, refer to [the official guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+To learn more about Next.js' file structure, refer to [the official guide on project structure](https://nextjs.org/docs/app/getting-started/project-structure).
 
-## Commands
+</details>
 
-The blueprint supports the following commands. Run these from the root of the project:
+## Resources
 
-| Command                | Action                                                                           |
-| :--------------------- | :------------------------------------------------------------------------------- |
-| `npm install`          | Installs dependencies                                                            |
-| `npm run storyblok`    | Starts a local development server with HTTPS enabled at `https://localhost:3000` |
-| `npm run dev`          | Starts a local dev server at `localhost:4321`                                    |
-| `npm run build`        | Build your production site to `./dist/`                                          |
-| `npm run preview`      | Preview your build locally, before deploying                                     |
-| `npm run astro ...`    | Run CLI commands like `astro add` or `astro check`                               |
-| `npm run astro --help` | Get help using the Astro CLI                                                     |
+- To learn more about what you can do with Storyblok, visit [our documentation and learning hub](https://www.storyblok.com/docs).
+- To learn more about the integration between Storyblok and Next.js, check our [dedicated developer tutorials](https://www.storyblok.com/tutorials?technologies=next).
+- To learn more about Next.js, check the [official documentation](https://nextjs.org/docs).
 
-## Learn more
+### Support
 
-To learn more about Storyblok, visit [Storyblok Documentation](https://www.storyblok.com/docs).
+- Have questions, need help, want to chat with other users? [Join our Discord community](https://discord.gg/jKrbAMz).
 
-To learn more about Astro, check the [official documentation](https://docs.astro.build/en/getting-started/).
-
-To learn more about the integration between Storyblok and Astro, check out our [dedicated developer tutorials](https://www.storyblok.com/tutorials?technologies=astro).
-
-***
-
-> [!TODO]
-> - [ ] Add GitHub Codespaces [badge](https://github.com/codespaces/badge.svg) ([Prebuilding your codespaces - GitHub Docs](https://docs.github.com/en/codespaces/prebuilding-your-codespaces))
-> - [ ] Add link to Discord + badge [![Discord Chat](https://img.shields.io/discord/308323056592486420.svg)](https://discord.gg/)  
-> - [ ] Add link to [docs](https://www.storyblok.com/docs)
-> - [ ] Add link to [Help Center](https://support.storyblok.com/hc/en-us)
-> - [ ] Add link to the specific technology guide
-> - [ ] Add link to [sign up](https://app.storyblok.com/#/signup)
-> - [ ] List packages and versions: Astro [5.7.1](https://github.com/withastro/astro/releases/tag/astro%405.7.1), SDK [6.1.1](https://github.com/storyblok/storyblok-astro/releases/tag/v6.1.1), Vite [6.3.3](https://github.com/vitejs/vite/releases/tag/v6.3.3)
-> - [ ] Add license
-
-> [!QUESTION] Repo template
-> Would it be helpful to turn each blueprint repo into a template?
+- Visit the Storyblok [Help Center](https://support.storyblok.com/hc/en-us).
