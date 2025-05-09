@@ -1,5 +1,5 @@
 
-# Next.js Storyblok Starter Blueprint
+# Next.js Storyblok Blank Blueprint
 
 Integrate [Next.js](https://nextjs.org/) and [Storyblok](http://www.storyblok.com) as a headless CMS.
 
@@ -32,7 +32,7 @@ npm install
 In the root of the project, create a `.env` file to store the Storyblok access token:
 
 ```sh
-STORYBLOK_ACCESS_TOKEN="<REPLACE_WITH_YOUR_TOKEN>"
+STORYBLOK_DELIVERY_API_TOKEN="<REPLACE_WITH_YOUR_TOKEN>"
 ```
 
 > [!IMPORTANT]
@@ -63,45 +63,6 @@ npx next dev --experimental-https
 Back in Storyblok, open the **Home** story to start editing.
 
 Happy building!
-
-## Project Structure
-
-<details>
-
-<summary>This blueprint includes the following directories and files (click to expand)</summary>
-
-```sh
-src/
-├─ app/
-│  ├─ [...slug]/
-│     ├─ page.js
-│  ├─ favicon.ico
-│  ├─ layout.js
-│  ├─ page.js
-├─ components/
-│  ├─ Feature.jsx
-│  ├─ Grid.jsx
-│  ├─ Pagee.jsx
-│  ├─ StoryblokProvider.jsx
-│  ├─ Teaser.jsx
-├─ lib/
-│  ├─ storyblok.js
-├─ .env.example
-├─ .gitignore
-├─ .netlify.toml
-├─ eslint.config.mjs
-├─ jsconfig.json
-├─ LICENSE
-├─ next.config.mjs
-├─ package-lock.json
-├─ package.json
-├─ README.md
-
-```
-
-To learn more about Next.js' file structure, refer to [the official guide on project structure](https://nextjs.org/docs/app/getting-started/project-structure).
-
-</details>
 
 ## Resources
 
