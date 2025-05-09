@@ -1,15 +1,15 @@
 
 # Next.js Storyblok Blank Blueprint
 
-Integrate [Next.js](https://nextjs.org/) and [Storyblok](http://www.storyblok.com) as a headless CMS.
+Integrate [Next.js](https://nextjs.org/) with [Storyblok](http://www.storyblok.com) as a headless CMS.
 
-The blueprint is ideal for kick-starting new Storyblok and Next.js projects. What's inside:
+The blueprint is ideal for kickstarting new Storyblok and Next.js projects. What's inside:
 - Pre-configured default blocks: `page`, `teaser`, `grid`, and `feature`.
 - Support for the Visual Editor's live preview.
 - Dynamic routing to fetch and render new stories automatically.
 - Minimal styling.
 
-To learn how to take advantage of Storyblok's range of features, including rich text rendering, global content management, and Internationalization, read our [Next.js-Storyblok integration guide](LINK).
+<!--To learn how to take advantage of Storyblok's range of features, including rich text rendering, global content management, and Internationalization, read our [Next.js-Storyblok integration guide](LINK).-->
 
 ***
 
@@ -73,5 +73,4 @@ Happy building!
 ### Support
 
 - Have questions, need help, want to chat with other users? [Join our Discord community](https://discord.gg/jKrbAMz).
-
 - Visit the Storyblok [Help Center](https://support.storyblok.com/hc/en-us).
