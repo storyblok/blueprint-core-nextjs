@@ -9,7 +9,7 @@ The blueprint is ideal for kick-starting new Storyblok and Next.js projects. Wha
 - Dynamic routing to fetch and render new stories automatically.
 - Minimal styling.
 
-To learn how to take advantage of Storyblok's range of features, including rich text rendering, global content management, and Internationalization, read our [Next.js-Storyblok integration guide](LINK).
+<!--To learn how to take advantage of Storyblok's range of features, including rich text rendering, global content management, and Internationalization, read our [Next.js-Storyblok integration guide](LINK).-->
 
 ***
 
@@ -32,7 +32,7 @@ npm install
 In the root of the project, create a `.env` file to store the Storyblok access token:
 
 ```sh
-STORYBLOK_DELIVERY_API_TOKEN="<REPLACE_WITH_YOUR_TOKEN>"
+STORYBLOK_DELIVERY_API_TOKEN=<REPLACE_WITH_YOUR_TOKEN>
 ```
 
 > [!IMPORTANT]
