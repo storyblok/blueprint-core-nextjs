@@ -1,5 +1,5 @@
 
-# Next.js Storyblok Blank Blueprint
+# Storyblok Blank Space Blueprint: Next.js
 
 Integrate [Next.js](https://nextjs.org/) with [Storyblok](http://www.storyblok.com) as a headless CMS.
 
@@ -41,11 +41,6 @@ STORYBLOK_DELIVERY_API_TOKEN=<REPLACE_WITH_YOUR_TOKEN>
 
 ### Set the default environment
 
-To connect to the Storyblok Visual Editor, the local project must run over HTTPS.
-
-> [!TIP]
-> Learn how to [create a local HTTPS certificate](https://www.storyblok.com/docs/concepts/visual-editor#local-development-via-https)
-
 To render a preview of the local project in the Visual Editor, follow these steps:
 
 1. Navigate to **Settings > Visual Editor**.
@@ -59,6 +54,9 @@ Run the development server with HTTPS enabled:
 ```sh
 npx next dev --experimental-https
 ```
+
+> [!IMPORTANT]
+> To connect to the Storyblok Visual Editor, the local project must run over HTTPS. Learn more in the [Visual Editor concept](https://www.storyblok.com/docs/concepts/visual-editor#local-development-via-https).
 
 Back in Storyblok, open the **Home** story to start editing.
 
