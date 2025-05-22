@@ -3,13 +3,16 @@
 
 Integrate [Next.js](https://nextjs.org/) with [Storyblok](http://www.storyblok.com) as a headless CMS.
 
-The blueprint is ideal for kickstarting new Storyblok and Next.js projects. What's inside:
+This blueprint is ideal for kickstarting new Storyblok and Next.js projects. What's inside:
 - Pre-configured default blocks: `page`, `teaser`, `grid`, and `feature`.
 - Support for the Visual Editor's live preview.
 - Dynamic routing to fetch and render new stories automatically.
 - Minimal styling.
 
-<!--To learn how to take advantage of Storyblok's range of features, including rich text rendering, global content management, and Internationalization, read our [Next.js-Storyblok integration guide](LINK).-->
+<!--
+> [!TIP]
+> Follow our [Nuxt guide](LINK) for a step-by-step walkthrough and learn more about Storyblok's range of features, including rich text rendering, custom content modeling, and internationalization. See the [@storyblok/nuxt package reference](https://storyblok.com/docs/packages/storyblok-nuxt) for further information.
+-->
 
 ***
 
@@ -19,9 +22,12 @@ The blueprint is ideal for kickstarting new Storyblok and Next.js projects. What
 
 ## Get Started
 
-1. Create a new repository based on this template
-2. Open the project on your device
-3. Install dependencies
+**No Storyblok account yet? [Sign up now](https://app.storyblok.com/#/signup?utm_source=docs) to experience a 14-day free trial of all features and enjoy our completely free Starter plan.**
+
+1. Create an empty new Storyblok space
+2. Create a new repository based on this template
+3. Open the project on your device
+4. Install dependencies
 
 ```sh
 npm install
@@ -39,12 +45,12 @@ STORYBLOK_DELIVERY_API_TOKEN=<REPLACE_WITH_YOUR_TOKEN>
 > Copy your space's preview access token from **Settings** > **Access Tokens**.
 > Learn more about Storyblok [access tokens](https://www.storyblok.com/docs/concepts/access-tokens).
 
-### Set the default environment
+### Connect the Visual Editor
 
 To render a preview of the local project in the Visual Editor, follow these steps:
 
 1. Navigate to **Settings > Visual Editor**.
-2. Set the default environment to `https://localhost:3000`.
+2. Set the default environment to `https://localhost:3000/`.
 3. Save.
 4. Open the `home` story.
 5. Click **Config**.
@@ -56,7 +62,7 @@ npx next dev --experimental-https
 ```
 
 > [!IMPORTANT]
-> To connect to the Storyblok Visual Editor, the local project must run over HTTPS. Learn more in the [Visual Editor concept](https://www.storyblok.com/docs/concepts/visual-editor#local-development-via-https).
+> To connect the Storyblok Visual Editor, the local project must run over HTTPS. Learn more in the [Visual Editor concept](https://www.storyblok.com/docs/concepts/visual-editor#local-development-via-https).
 
 Back in Storyblok, open the **Home** story to start editing.
 
