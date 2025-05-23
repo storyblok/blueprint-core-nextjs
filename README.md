@@ -9,10 +9,8 @@ This blueprint is ideal for kickstarting new Storyblok and Next.js projects. Wha
 - Dynamic routing to fetch and render new stories automatically.
 - Minimal styling.
 
-<!--
 > [!TIP]
-> Follow our [Nuxt guide](LINK) for a step-by-step walkthrough and learn more about Storyblok's range of features, including rich text rendering, custom content modeling, and internationalization. See the [@storyblok/nuxt package reference](https://storyblok.com/docs/packages/storyblok-nuxt) for further information.
--->
+> Follow our [Next.js guide](https://www.storyblok.com/docs/guides/nextjs/) for a step-by-step walkthrough and learn more about Storyblok's range of features, including rich text rendering, custom content modeling, and internationalization. See the [@storyblok/react package reference](https://storyblok.com/docs/packages/storyblok-react) for further information.
 
 ***
 
