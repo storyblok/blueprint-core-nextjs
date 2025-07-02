@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { getStoryblokApi } from "@/lib/storyblok";
+import { getStoryblokApi } from '@/lib/storyblok';
 
 export default function StoryblokProvider({ children }) {
-  getStoryblokApi();
-  return children;
+	getStoryblokApi();
+	return children;
 }
