@@ -1,5 +1,5 @@
 
-# Storyblok Starter Space Blueprint: Next.js
+# Storyblok Core Space Blueprint: Next.js
 
 Integrate [Next.js](https://nextjs.org/) with [Storyblok](http://www.storyblok.com) as a headless CMS.
 
