@@ -1,0 +1,42 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "04:00"
+    open-pull-requests-limit: 10
+    groups:
+      framework:
+        patterns:
+          - "@angular/*"
+          - "@angular-devkit/*"
+          - "@astrojs/*"
+          - "astro"
+          - "next"
+          - "@next/*"
+          - "eslint-config-next"
+          - "nuxt"
+          - "@nuxt/*"
+          - "@nuxtjs/*"
+          - "svelte"
+          - "@sveltejs/*"
+          - "vue"
+          - "@vue/*"
+          - "@vitejs/*"
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+      dev-dependencies:
+        dependency-type: development
+        exclude-patterns:
+          - "@storyblok/*"
+      production-minor-patch:
+        dependency-type: production
+        update-types:
+          - minor
+          - patch
+        exclude-patterns:
+          - "@storyblok/*"
