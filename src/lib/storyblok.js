@@ -7,14 +7,20 @@ import { defineStoryblokBlocks } from '@storyblok/react';
 
 export const apiClient = createApiClient({
 	accessToken: process.env.STORYBLOK_DELIVERY_API_TOKEN,
-	/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js */
+	/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/libraries/js/content-delivery-api-client#region */
 	region: process.env.STORYBLOK_REGION || 'eu',
 	/** The following code is only required when creating a Storyblok space directly via the Blueprints feature. */
-	baseURL: process.env.STORYBLOK_API_BASE_URL
-		? `${new URL(process.env.STORYBLOK_API_BASE_URL).origin}/v2`
+	baseUrl: process.env.STORYBLOK_API_BASE_URL
+		? new URL(process.env.STORYBLOK_API_BASE_URL).origin
 		: undefined,
 });
 
-export const { StoryblokBlock, StoryblokRichText } = defineStoryblokBlocks({
-	components: { page: Page, teaser: Teaser, feature: Feature, grid: Grid },
-});
+export const { StoryblokBlock, StoryblokBlocks, StoryblokRichText } =
+	defineStoryblokBlocks({
+		components: {
+			page: Page,
+			feature: Feature,
+			grid: Grid,
+			teaser: Teaser,
+		},
+	});

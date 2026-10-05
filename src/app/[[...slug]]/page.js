@@ -1,29 +1,20 @@
+import { notFound } from 'next/navigation';
 import { StoryblokPreview } from '@storyblok/react/rsc';
-import { apiClient } from '@/lib/storyblok';
 import { renderContent } from '@/lib/actions';
-import { Suspense } from 'react';
+import { apiClient } from '@/lib/storyblok';
 
 export default async function Page({ params }) {
 	const { slug } = await params;
+
 	let fullSlug = slug ? slug.join('/') : 'home';
 
-	const storyPromise = apiClient.stories.get(fullSlug, {
+	const { data } = await apiClient.stories.get(fullSlug, {
 		query: { version: 'draft' },
 	});
 
-	return (
-		<Suspense fallback={<main>Loading...</main>}>
-			<PageContent storyPromise={storyPromise} />
-		</Suspense>
-	);
-}
-async function PageContent({ storyPromise }) {
-	const { data } = await storyPromise;
-	const story = data?.story;
-
-	if (!story) {
-		return <main>Story not found</main>;
+	if (!data?.story) {
+		notFound();
 	}
 
-	return <StoryblokPreview story={story} renderContent={renderContent} />;
+	return <StoryblokPreview story={data.story} renderContent={renderContent} />;
 }
