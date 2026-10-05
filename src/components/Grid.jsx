@@ -1,13 +1,8 @@
-import {
-	storyblokEditable,
-	StoryblokServerComponent,
-} from '@storyblok/react/rsc';
+import { StoryblokBlocks } from '@/lib/storyblok';
 
-const Grid = ({ blok }) => (
-	<div {...storyblokEditable(blok)} className="grid">
-		{blok.columns.map((nestedBlok) => (
-			<StoryblokServerComponent blok={nestedBlok} key={nestedBlok._uid} />
-		))}
+const Grid = ({ block, editable }) => (
+	<div {...editable} className="grid">
+		{block.columns && <StoryblokBlocks blocks={block.columns} />}
 	</div>
 );
 
